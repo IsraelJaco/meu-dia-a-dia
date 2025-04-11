@@ -62,3 +62,19 @@ function removerTarefa(index) {
   localStorage.setItem("tarefas", JSON.stringify(tarefas));
   carregarTarefas();
 }
+// Função para exportar o conteúdo do bloco de notas para PDF
+function exportarNotasPDF() {
+  const { jsPDF } = window.jspdf;  // Acessando a biblioteca jsPDF
+  const doc = new jsPDF();  // Criando um novo documento PDF
+  
+  // Pegando o conteúdo do bloco de notas
+  const notas = document.getElementById("notas").value;
+
+  // Adicionando o conteúdo ao PDF
+  doc.text("Notas:", 10, 10);  // Adicionando título
+  doc.text(notas, 10, 20);  // Adicionando o conteúdo das notas
+
+  // Gerar o PDF e baixar
+  doc.save("notas.pdf");
+}
+

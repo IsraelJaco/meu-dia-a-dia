@@ -22,30 +22,34 @@
     </section>
 
     <section id="clima">
-      <h2>Previsão do Tempo</h2>
-      <div id="info-clima">Carregando clima...</div>
+      <h2>☀️ Previsão do Tempo</h2>
+      <p id="local">Local: ...</p>
+      <p id="temperatura">Temperatura: ...</p>
+      <p id="descricao-clima">Clima: ...</p>
     </section>
 
-    <section id="frase">
-      <h2>Frase do Dia</h2>
-      <p id="frase-dia">Carregando frase...</p>
+    <section id="motivacional">
+      <h2>💬 Frase Motivacional</h2>
+      <blockquote id="frase-texto">Carregando frase motivacional...</blockquote>
+      <footer id="autor-frase"></footer>
+      <button onclick="novaFrase()">Nova Frase</button>
     </section>
+    
 
     <section id="bloco-notas">
       <h2>Bloco de Notas</h2>
       <textarea id="notas" placeholder="Escreva suas ideias aqui..."></textarea>
-      <button onclick="exportarPDF()">Exportar PDF</button>
+      <button onclick="exportarNotasPDF()">Exportar PDF</button>
 
     </section>
-    
   </main>
 
+  <!-- Scripts -->
   <script src="js/main.js"></script>
   <script src="js/tarefas.js"></script>
   <script src="js/clima.js"></script>
   <script src="js/frases.js"></script>
   <script src="js/pdf.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
 </body>
 </html>
